@@ -34,19 +34,17 @@
             <tr>
                 <td>
                     <input type="submit" value="Submit">
-                </td>
+               </td>
             </tr>
         </table-->
         <div class="contenedor">
             <div id="ui-bar-form" class="ui-bar ui-bar-a">
-                <form>
-
+                <form action="./ServletUsuario" method="post">
                     <label for="text-1">Usuario:</label>
-                    <input type="text" name="text-1" id="text-1" value="">
+                    <input type="text" name="usuario" id="text-1" value="" />
                     <label for="text-3">Contraseña</label>
-                    <input type="password" name="text-3" value="">
-
-                    <input type="button" data-inline="true" value="Ingresar">
+                    <input type="password" name="clave" value="" />
+                    <input type="button" data-inline="true" value="Ingresar" />
                     <div class="ui-input-btn ui-btn ui-btn-inline">
                         ¿Olvido su contraseña?
                         <input type="button" data-enhanced="true" value="Olvido">
