@@ -15,5 +15,5 @@ public class SqlUsuario {
     public static String ver = "SELECT id_Usuario,Nombre,Clave,Rol_id_Roles,Estado FROM Usuario";
     public static String buscar = "SELECT id_Usuario,Nombre,Clave,Rol_id_Roles,Estado Usuario WHERE id_Usuario=? ";
     public static String like = "SELECT id_Usuario,Nombre,Clave,Rol_id_Roles,Estado FROM Usuario WHERE Nombre LIKE %?%,Clave LIKE %?%,Rol_id_Roles LIKE %?%,Estado LIKE %?%";
-    public static String login = "SELECT id_Usuario,Nombre,Clave,Rol_id_Roles,Estado FROM Usuario WHERE Nombre = ?, Clave = ?";
+    public static String login = "SELECT id_Usuario,Nombre,Clave,Rol_id_Roles,Estado FROM Usuario WHERE Nombre = ? AND Clave = ?";
 }
