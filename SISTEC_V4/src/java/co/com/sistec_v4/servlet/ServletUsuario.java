@@ -4,6 +4,8 @@
  */
 package co.com.sistec_v4.servlet;
 
+import co.com.sistec_v4.bean.BeanUsuario;
+import co.com.sistec_v4.dao.DaoUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,6 +35,15 @@ public class ServletUsuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        BeanUsuario beanUsuario = new BeanUsuario();
+        beanUsuario.setNombre(request.getParameter("usurio"));
+        beanUsuario.setClave(request.getParameter("clave"));
+        DaoUsuario daoUsuario = new DaoUsuario();
+        BeanUsuario beanUsuario1 = daoUsuario.login(beanUsuario);
+        if(beanUsuario1 != null){
+            HttpSession session = request.getSession();
+            session.setAttribute("Usuario", beanUsuario1);
+        }
         
     }
 

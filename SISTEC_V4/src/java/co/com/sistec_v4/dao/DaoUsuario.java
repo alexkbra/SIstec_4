@@ -10,6 +10,9 @@ import co.com.sistec_v4.util.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -19,11 +22,11 @@ public class DaoUsuario {
 
     public BeanUsuario login(BeanUsuario beanUsuario) {
         BeanUsuario resBeanUsuario = null;
+        Connection con = Conexion.getCon();
         try {
-            Connection con = Conexion.getCon();
             PreparedStatement preparedStatement = con.prepareStatement(SqlUsuario.login);
-            preparedStatement.setObject(1, con);
-            preparedStatement.setObject(2, con);
+            preparedStatement.setObject(1, beanUsuario.getNombre());
+            preparedStatement.setObject(2, beanUsuario.getClave());
             ResultSet rs = preparedStatement.executeQuery();
             if(rs.next()){
                 resBeanUsuario = new BeanUsuario();
@@ -33,8 +36,13 @@ public class DaoUsuario {
                 resBeanUsuario.setEstado(Boolean.parseBoolean(rs.getString("Estado")));
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Logger.getLogger(DaoUsuario.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(DaoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
             return resBeanUsuario;
         }
     }

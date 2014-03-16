@@ -4,7 +4,6 @@
     Author     : Cindy Tatiana Montoya Leal
 --%>
 
-<%@page import="co.com.sistec_v3.diccionario.Constantes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
