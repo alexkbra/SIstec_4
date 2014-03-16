@@ -36,7 +36,7 @@ public class ServletUsuario extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         BeanUsuario beanUsuario = new BeanUsuario();
-        beanUsuario.setNombre(request.getParameter("usurio"));
+        beanUsuario.setNombre(request.getParameter("usuario"));
         beanUsuario.setClave(request.getParameter("clave"));
         DaoUsuario daoUsuario = new DaoUsuario();
         BeanUsuario beanUsuario1 = daoUsuario.login(beanUsuario);

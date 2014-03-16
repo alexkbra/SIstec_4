@@ -20,7 +20,7 @@
             <div id="ui-bar-form" class="ui-bar ui-bar-a">
                 <form action="./ServletUsuario" method="post">
                     <label for="text-1">Usuario:</label>
-                    <input type="text" name="usuario" id="text-1" value="" />
+                    <input type="text" name="usuario" value="" />
                     <label for="text-3">Contraseña</label>
                     <input type="password" name="clave" value="" />
                     <input type="submit" data-inline="true" value="Ingresar" />
