@@ -17,26 +17,6 @@
         <script src="js/jquery.mobile-1.4.2.min.js"></script>
     </head>
     <body>
-        <!--table>
-            <tr>
-                <td>
-                    <label for="txtUsuario" name="lblUsuario"><%= Constantes.usuario%></label>
-                </td>
-                <td>
-                    <input type="text" size="15" maxlength="30" name="txtUsuario">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="password" name="pswClave">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Submit">
-               </td>
-            </tr>
-        </table-->
         <div class="contenedor">
             <div id="ui-bar-form" class="ui-bar ui-bar-a">
                 <form action="./ServletUsuario" method="post">
@@ -44,14 +24,13 @@
                     <input type="text" name="usuario" id="text-1" value="" />
                     <label for="text-3">Contraseña</label>
                     <input type="password" name="clave" value="" />
-                    <input type="button" data-inline="true" value="Ingresar" />
+                    <input type="submit" data-inline="true" value="Ingresar" />
                     <div class="ui-input-btn ui-btn ui-btn-inline">
                         ¿Olvido su contraseña?
                         <input type="button" data-enhanced="true" value="Olvido">
                     </div>
                 </form>
             </div>
-
         </div>
     </body>
 </html>
