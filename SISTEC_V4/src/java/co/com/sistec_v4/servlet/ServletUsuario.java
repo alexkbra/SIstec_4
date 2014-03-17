@@ -43,6 +43,7 @@ public class ServletUsuario extends HttpServlet {
         if(beanUsuario1 != null){
             HttpSession session = request.getSession();
             session.setAttribute("Usuario", beanUsuario1);
+            request.getRequestDispatcher("./inicio/menu.jsp").forward(request, response);
         }
         
     }
