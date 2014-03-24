@@ -9,5 +9,6 @@ package co.com.sistec_v4.diccionario;
 public class Constantes {
     
     public static final String usuario = Configuracion.getPropiedad("usuario");
+    public static final String clave = Configuracion.getPropiedad("clave");
     
 }
