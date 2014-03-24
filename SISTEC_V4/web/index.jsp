@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 6/01/2014, 12:21:22 AM
-    Author     : Cindy Tatiana Montoya Leal
+    Author     : Cindy Tatiana Montoya Leal, Jhon Alexander Muñoz Duque
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
