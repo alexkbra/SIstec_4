@@ -18,8 +18,8 @@
                 <form action="./ServletUsuario" method="post">
                     <label for="usuario"><%=Constantes.usuario%></label>
                     <input type="text" id="usuario" name="usuario" value="" />
-                    <label for="password"><%=Constantes.clave%></label>
-                    <input type="password" id="password" name="clave" value="" />
+                    <label for="clave"><%=Constantes.clave%></label>
+                    <input type="clave" id="clave" name="clave" value="" />
                     <input type="submit" value="Ingresar" />
                     <input type="button" value="¿Olvido su contraseña?">
                 </form>
