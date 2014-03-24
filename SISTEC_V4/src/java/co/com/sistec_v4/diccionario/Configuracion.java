@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package co.com.sistec_v4.diccionario;
 
 import java.io.FileInputStream;
@@ -12,7 +6,9 @@ import java.util.Properties;
 
 /**
  *
- * @author AleXkbra
+ * @author Jhon Alexander Muñoz Duque.
+ * @version 003
+ * 
  */
 public class Configuracion {
     
