@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inicio</title>
+        <title>Inicio Menú</title>
         <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.2.min.css">
         <link rel="stylesheet" href="css/sistec/style.css">
         <script src="js/jquery.js"></script>
