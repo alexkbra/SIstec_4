@@ -20,8 +20,8 @@
                     <input type="text" id="usuario" name="usuario" value="" />
                     <label for="clave"><%=Constantes.clave%></label>
                     <input type="clave" id="clave" name="clave" value="" />
-                    <input type="submit" value="Ingresar" />
-                    <input type="button" value="¿Olvido su contraseña?">
+                    <input type="submit" value="<%= Constantes.ingresar %>" />
+                    <input type="button" value="<%= Constantes.olvido %>">
                 </form>
             </div>
         </div>

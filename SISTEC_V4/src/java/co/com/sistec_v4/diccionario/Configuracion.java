@@ -1,5 +1,6 @@
 package co.com.sistec_v4.diccionario;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -17,9 +18,9 @@ public class Configuracion {
         try {
             Properties propiedades = new Properties();
             try{
-                propiedades.load(new FileInputStream("C:\\Users\\AleX\\Dropbox\\SISTEC\\Proyecto\\SISTEC_V4\\src\\java\\co\\com\\sistec_v3\\diccionario\\SISTEC_V4_Constantes.properties"));
+                propiedades.load(new FileInputStream(new File("C:\\Users\\AleX\\Documents\\GitHub\\SIstec_4\\SISTEC_V4\\src\\java\\co\\com\\sistec_v4\\diccionario\\SISTEC_V4_Constantes.properties")));
             }catch(Exception es){
-                propiedades.load(new FileInputStream("C:\\Users\\Tatiana\\Dropbox\\SISTEC\\Proyecto\\SISTEC_V4\\src\\java\\co\\com\\sistec_v3\\diccionario\\SISTEC_V4_Constantes.properties"));
+                propiedades.load(new FileInputStream(new File("C:\\Users\\Tatiana\\Documents\\GitHub\\SIstec_4\\SISTEC_V4\\src\\java\\co\\com\\sistec_v4\\diccionario\\SISTEC_V4_Constantes.properties")));
             }
             pro = propiedades.getProperty(propiedad);
             return pro;
