@@ -1,12 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.com.sistec_v4.dao;
 
 import co.com.sistec_v4.bean.BeanUsuario;
 import co.com.sistec_v4.sql.SqlUsuario;
-import co.com.sistec_v4.util.Conexion;
+import co.com.sistec_v4.utilidades.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,7 +12,8 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author AleXkbra
+ * @author Jhon Alexander Muños Duque.
+ * @version 003
  */
 public class DaoUsuario {
 

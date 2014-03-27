@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.com.sistec_v4.servlet;
 
 import co.com.sistec_v4.bean.BeanUsuario;
@@ -16,7 +12,8 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author AleXkbra
+ * @author Cindy Tatiana Montoya Leal
+ * @version 003
  */
 @WebServlet(name = "ServletUsuario", urlPatterns = {"/ServletUsuario"})
 public class ServletUsuario extends HttpServlet {
@@ -33,16 +30,16 @@ public class ServletUsuario extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("UTF-8");
         BeanUsuario beanUsuario = new BeanUsuario();
-        beanUsuario.setNombre(request.getParameter("usuario"));
+        beanUsuario.setNombre(request.getParameter("txtUsuario"));
         beanUsuario.setClave(request.getParameter("clave"));
         DaoUsuario daoUsuario = new DaoUsuario();
         BeanUsuario beanUsuario1 = daoUsuario.login(beanUsuario);
         if(beanUsuario1 != null){
             HttpSession session = request.getSession();
             session.setAttribute("Usuario", beanUsuario1);
-            request.getRequestDispatcher("./inicio/menu.jsp").forward(request, response);
+            request.getRequestDispatcher("../inicio/menu.jsp").forward(request, response);
         }
         
     }

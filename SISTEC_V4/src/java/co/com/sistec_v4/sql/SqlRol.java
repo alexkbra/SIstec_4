@@ -9,10 +9,10 @@ package co.com.sistec_v4.sql;
  */
 public class SqlRol {
     
-    public String registrar = "INSERT INTO Rol (Nombre,Descripcion,Estado) VALUES (?,?,?)";
-    public String estado = "UPDATE Rol SET Estado=? WHERE id_Rol=?";
-    public String actualizar = "UPDATE Rol SET Nombre=?,Descripcion=? WHERE id_Rol=?";
-    public String ver = "SELECT id_Rol,Nombre,Descripcion FROM Rol";
-    public String buscar = "SELECT id_Rol,Nombre,Descripcion FROM Rol WHERE id_Rol=? ";
-    public String like = "SELECT id_Rol,Nombre,Descripcion,Estado FROM Rol WHERE Nombre LIKE %?%, Descripcion LIKE %?%, Estado LIKE %?%";
+    public static String guardar = "INSERT INTO Rol (Nombre,Descripcion,Estado) VALUES (?,?,?)";
+    public static String eliminar = "UPDATE Rol SET Estado=? WHERE id_Rol=?";
+    public static String actualizar = "UPDATE Rol SET Nombre=?,Descripcion=? WHERE id_Rol=?";
+    public static String ver = "SELECT id_Rol,Nombre,Descripcion,Estado FROM Rol";
+    public static String buscar = "SELECT id_Rol,Nombre,Descripcion FROM Rol WHERE id_Rol=? ";
+    public static String like = "SELECT id_Rol,Nombre,Descripcion,Estado FROM Rol WHERE Nombre LIKE %?%, Descripcion LIKE %?%, Estado LIKE %?%";
 }

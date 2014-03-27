@@ -1,4 +1,4 @@
-package co.com.sistec_v4.util;
+package co.com.sistec_v4.utilidades;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,8 +16,8 @@ public class Conexion {
 
     public static Connection getCon() {
         String usuario = "root";
-        String clave = "alex";
-//        String clave = "root";
+//        String clave = "alex";
+        String clave = "root";
         String url = "jdbc:mysql://localhost/SISTEC_V3";
         String driver = "com.mysql.jdbc.Driver";
         return getCon(usuario, clave, url, driver);

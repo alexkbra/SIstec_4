@@ -16,8 +16,8 @@
         <div class="contenedor">
             <div>
                 <form action="./ServletUsuario" method="post">
-                    <label for="usuario"><%=Constantes.usuario%></label>
-                    <input type="text" id="usuario" name="usuario" value="" />
+                    <label for="txtUsuario"><%=Constantes.usuario%></label>
+                    <input type="text" id="txtUsuario" name="txtUsuario" value="" />
                     <label for="clave"><%=Constantes.clave%></label>
                     <input type="clave" id="clave" name="clave" value="" />
                     <input type="submit" value="<%= Constantes.ingresar %>" />

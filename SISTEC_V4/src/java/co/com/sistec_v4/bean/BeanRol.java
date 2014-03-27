@@ -9,6 +9,7 @@ package co.com.sistec_v4.bean;
 
 public class BeanRol {
 
+    private Integer idRol;
     private String nombre;
     private String descripcion;
     private Boolean estado;
@@ -16,10 +17,19 @@ public class BeanRol {
     public BeanRol() {
     }
 
-    public BeanRol(String nombre, String descripcion, Boolean estado) {
+    public BeanRol(Integer idRol, String nombre, String descripcion, Boolean estado) {
+        this.idRol = idRol;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.estado = estado;
+    }
+
+    public Integer getIdRol() {
+        return idRol;
+    }
+
+    public void setIdRol(Integer idRol) {
+        this.idRol = idRol;
     }
 
     public String getNombre() {
@@ -38,11 +48,12 @@ public class BeanRol {
         this.descripcion = descripcion;
     }
 
-    public Boolean getEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
+
 }
